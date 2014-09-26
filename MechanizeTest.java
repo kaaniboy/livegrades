@@ -21,15 +21,18 @@ public class MechanizeTest {
 		
 		Student student = new Student(M.USERNAME, M.PASSWORD);
 		
-		for(Class c: student.getClasses()) {
-			System.out.println(c.getName());
-			
-			for(WeightCategory cat: c.getWeights()) {
-				System.out.println(cat.getWeight() + ": " + cat.getTotalReceivedPoints() + "/" + cat.getTotalPossiblePoints());
-			}
-			
-			System.out.println();
-		}
+//		for(Class c: student.getClasses()) {
+//			System.out.println(c.getName());
+//			
+//			for(WeightCategory cat: c.getWeights()) {
+//				System.out.println(cat.getWeight() + ": " + cat.getTotalReceivedPoints() + "/" + cat.getTotalPossiblePoints());
+//			}
+//			
+//			System.out.println();
+//		}
+		
+		System.out.println(student.getClasses().get(0).getGrade());
+		System.out.println(student.getClasses().get(0).predictGrade("Writing", 1, 1));
 		
 	}
 }
